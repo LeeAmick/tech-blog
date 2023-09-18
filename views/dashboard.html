@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="post-list">
+            <h2>Your Blog Posts</h2>
+            <ul>
+                <li>
+                    <h3>Post Title</h3>
+                    <p>Post Content</p>
+                    <a href="/dashboard/edit/1">Edit</a>
+                    <a href="/dashboard/delete/1">Delete</a>
+                </li>
+            </ul>
+        </section>
+        <section class="add-post">
+            <h2>Add New Blog Post</h2>
+            <form action="/dashboard/new" method="post">
+                <input type="text" name="title" placeholder="Title" required>
+                <textarea name="content" placeholder="Content" required></textarea>
+                <button type="submit">Create Post</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2023 Your Blog
+    </footer>
+</body>
+</html>
